@@ -22,19 +22,18 @@
 		var ET05Label = "Science for Change";
 		var ET06Label = "Small Green Steps";
 		var ET07Label = "Neutral";
-		var ET01Color = "#ffa600"
-		var ET02Color = "#ff764a"
-		var ET03Color = "#ef5675"
-		var ET04Color = "#bc5090"
-		var ET05Color = "#7a5195"
-		var ET06Color = "#374c80"
-		var ET07Color = "#003f5c"
+		var ET01Color = "#ffa600";
+		var ET02Color = "#ff764a";
+		var ET03Color = "#ef5675";
+		var ET04Color = "#bc5090";
+		var ET05Color = "#7a5195";
+		var ET06Color = "#374c80";
+		var ET07Color = "#003f5c";
 		var AttSize = 10
 
 
 		function filterRows(rows, type){
 			x=rows.filter(function(d){ return d.ETName == type })
-			//console.log(x)
 			return x;
 
 		}
@@ -430,7 +429,6 @@
       						color: '#000000',
       						width: 2
    						}
-					//	color: 'rgb(238, 117, 47)'
 					},
 					type: 'scatter3d',
 					legendgroup: 'attractors'
@@ -448,7 +446,6 @@
       						color: '#000000',
       						width: 2
    						}
-						//colorway: ['rgb(88, 165, 92)']
 					},
 					type: 'scatter3d',
 					legendgroup:  'attractors'
@@ -466,7 +463,6 @@
       						color: '#000000',
       						width: 2
    						}
-						//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 					},
 					type: 'scatter3d',
 					legendgroup:  'attractors'
@@ -484,7 +480,6 @@
       						color: '#000000',
       						width: 2
    						}
-					//	colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 					},
 					type: 'scatter3d',
 					legendgroup:  'attractors'
@@ -502,7 +497,6 @@
       						color: '#000000',
       						width: 2
    						}
-						//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 					},
 					type: 'scatter3d',
 					legendgroup:  'attractors'
@@ -520,7 +514,6 @@
       						color: '#000000',
       						width: 2
    						}
-						//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 					},
 					type: 'scatter3d',
 					legendgroup:  'attractors'
@@ -538,7 +531,6 @@
       						color: '#000000',
       						width: 2
    						}
-						//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 					},
 					type: 'scatter3d',
 					legendgroup:  'attractors'
@@ -590,7 +582,6 @@
 						marker: {
 							size: 5,
 							opacity: 0.8,
-						//	color: 'rgb(238, 117, 47)'
 						},
 						type: 'scatter3d',
 						legendgroup:  'points'
@@ -604,7 +595,6 @@
 						marker: {
 							size: 5,
 							opacity: 0.8,
-							//colorway: ['rgb(88, 165, 92)']
 						},
 						type: 'scatter3d',
 						legendgroup:  'points'
@@ -618,7 +608,6 @@
 						marker: {
 							size: 5,
 							opacity: 0.8,
-							//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 						},
 						type: 'scatter3d',
 						legendgroup:  'points'
@@ -632,7 +621,6 @@
 						marker: {
 							size: 5,
 							opacity: 0.8,
-						//	colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 						},
 						type: 'scatter3d',
 						legendgroup:  'points'
@@ -646,7 +634,6 @@
 						marker: {
 							size: 5,
 							opacity: 0.8,
-							//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 						},
 						type: 'scatter3d',
 						legendgroup:  'points'
@@ -660,7 +647,6 @@
 						marker: {
 							size: 5,
 							opacity: 0.8,
-							//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 						},
 						type: 'scatter3d',
 						legendgroup:  'points'
@@ -674,14 +660,13 @@
 						marker: {
 							size: 5,
 							opacity: 0.8,
-							//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 						},
 						type: 'scatter3d',
 						legendgroup:  'points'
 					};
 
 
-					var data2 = [ET01Trace2, ET02Trace2, ET03Trace2, ET04Trace2, ET05Trace2, ET06Trace2, ET07Trace2, ET01Trace, ET02Trace, ET03Trace, ET04Trace, ET05Trace, ET06Trace, ET07Trace, ];
+					var data2 = [ET01Trace2, ET02Trace2, ET03Trace2, ET04Trace2, ET05Trace2, ET06Trace2, ET07Trace2, ET01Trace, ET02Trace, ET03Trace, ET04Trace, ET05Trace, ET06Trace, ET07Trace];
 					var layout = {
 
 
@@ -722,7 +707,6 @@
 		}
 
 		function showPlotAtt(){
-		//	document.getElementById('plot').innerHTML = "";
 		console.log("test")
 			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-N2479/main/ETAtt.csv', function(err, rows){
 
@@ -743,7 +727,6 @@
       						color: '#000000',
       						width: 2
    						}
-					//	color: 'rgb(238, 117, 47)'
 					},
 					type: 'scatter3d'
 				};
@@ -760,7 +743,6 @@
       						color: '#000000',
       						width: 2
    						}
-						//colorway: ['rgb(88, 165, 92)']
 					},
 					type: 'scatter3d'
 				};
@@ -777,7 +759,6 @@
       						color: '#000000',
       						width: 2
    						}
-						//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 					},
 					type: 'scatter3d'
 				};
@@ -794,7 +775,6 @@
       						color: '#000000',
       						width: 2
    						}
-					//	colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 					},
 					type: 'scatter3d'
 				};
@@ -811,7 +791,6 @@
       						color: '#000000',
       						width: 2
    						}
-						//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 					},
 					type: 'scatter3d'
 				};
@@ -828,7 +807,6 @@
       						color: '#000000',
       						width: 2
    						}
-						//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 					},
 					type: 'scatter3d'
 				};
@@ -846,7 +824,6 @@
       						color: '#000000',
       						width: 2
    						}
-						//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
 					},
 					type: 'scatter3d'
 				};
@@ -906,7 +883,7 @@
 		<button type="button" id="Science for Change" onclick="ET05Plot()">Science for Change</button>
 		<button type="button" id="Small Green Steps" onclick="ET06Plot()">Small Green Steps</button>
 		<button type="button" id="Neutral" onclick="ET07Plot()">Neutral</button>
-		<button type="button" id="All EcoTypes (Spring/Fall 2022; n = 2115)" onclick="showPlotAll()">Show All EcoTypes w/ Attractors</button>
+		<button type="button" id="All EcoTypes (2022; n = 2479)" onclick="showPlotAll()">Show All EcoTypes w/ Attractors</button>
 		<button type="button" id="EcoTypes Attractors (2022; n = 2479)" onclick="showPlotAtt()">Show EcoTypes Attractors Only</button>
 	</div>
 	<h3 id="title">All EcoTypes (2022; n = 2479)</h3>
