@@ -15,22 +15,20 @@
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
 	<script>
-		var ET01Label = "Earth Justice";
-		var ET02Label = "Indigenous Justice";
-		var ET03Label = "Ecoscience";
-		var ET04Label = "Ecospirituality";
-		var ET05Label = "Science for Humanity";
-		var ET06Label = "Science Policy";
-		var ET07Label = "Small Green Steps";
-		var ET08Label = "Other";
+		var ET01Label = "Earth Action";
+		var ET02Label = "Ecoscience";
+		var ET03Label = "Ecospirituality";
+		var ET04Label = "Indigenous Justice";
+		var ET05Label = "Science for Change";
+		var ET06Label = "Small Green Steps";
+		var ET07Label = "Neutral";
 		var ET01Color = "#ffa600"
-		var ET02Color = "#ff7c43"
-		var ET03Color = "#f95d6a"
-		var ET04Color = "#d45087"
-		var ET05Color = "#a05195"
-		var ET06Color = "#665191"
-		var ET07Color = "#2f4b7c"
-		var ET08Color = "#000000"
+		var ET02Color = "#ff764a"
+		var ET03Color = "#ef5675"
+		var ET04Color = "#bc5090"
+		var ET05Color = "#7a5195"
+		var ET06Color = "#374c80"
+		var ET07Color = "#003f5c"
 		var AttSize = 10
 
 
@@ -43,7 +41,7 @@
 
 		function ET01Plot(){
 			document.getElementById('plot').innerHTML = "";
-			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-JUN-OCT/main/ETAll.csv', function(err, rows){
+			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-N2479/main/ETAll.csv', function(err, rows){
 				function unpack(rows, key, filter){
 					f=filterRows(rows,filter)
 					return f.map(function(f){return f[key];});
@@ -96,7 +94,7 @@
 
 		function ET02Plot(){
 			document.getElementById('plot').innerHTML = "";
-			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-JUN-OCT/main/ETAll.csv', function(err, rows){
+			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-N2479/main/ETAll.csv', function(err, rows){
 				function unpack(rows, key, filter){
 					f=filterRows(rows,filter)
 					return f.map(function(f){return f[key];});
@@ -149,7 +147,7 @@
 
 		function ET03Plot(){
 			document.getElementById('plot').innerHTML = "";
-			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-JUN-OCT/main/ETAll.csv', function(err, rows){
+			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-N2479/main/ETAll.csv', function(err, rows){
 				function unpack(rows, key, filter){
 					f=filterRows(rows,filter)
 					return f.map(function(f){return f[key];});
@@ -202,7 +200,7 @@
 
 		function ET04Plot(){
 			document.getElementById('plot').innerHTML = "";
-			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-JUN-OCT/main/ETAll.csv', function(err, rows){
+			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-N2479/main/ETAll.csv', function(err, rows){
 				function unpack(rows, key, filter){
 					f=filterRows(rows,filter)
 					return f.map(function(f){return f[key];});
@@ -255,7 +253,7 @@
 
 		function ET05Plot(){
 			document.getElementById('plot').innerHTML = "";
-			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-JUN-OCT/main/ETAll.csv', function(err, rows){
+			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-N2479/main/ETAll.csv', function(err, rows){
 				function unpack(rows, key, filter){
 					f=filterRows(rows,filter)
 					return f.map(function(f){return f[key];});
@@ -308,7 +306,7 @@
 
 		function ET06Plot(){
 			document.getElementById('plot').innerHTML = "";
-			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-JUN-OCT/main/ETAll.csv', function(err, rows){
+			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-N2479/main/ETAll.csv', function(err, rows){
 				function unpack(rows, key, filter){
 					f=filterRows(rows,filter)
 					return f.map(function(f){return f[key];});
@@ -361,7 +359,7 @@
 
 		function ET07Plot(){
 			document.getElementById('plot').innerHTML = "";
-			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-JUN-OCT/main/ETAll.csv', function(err, rows){
+			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-N2479/main/ETAll.csv', function(err, rows){
 				function unpack(rows, key, filter){
 					f=filterRows(rows,filter)
 					return f.map(function(f){return f[key];});
@@ -412,62 +410,9 @@
 			return true;
 		}
 
-		function ET08Plot(){
-			document.getElementById('plot').innerHTML = "";
-			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-JUN-OCT/main/ETAll.csv', function(err, rows){
-				function unpack(rows, key, filter){
-					f=filterRows(rows,filter)
-					return f.map(function(f){return f[key];});
-				}
-				ET08Trace = {
-					name: ET08Label,
-					x:unpack(rows, 'Place (x)', ET08Label),
-					y:unpack(rows, 'Knowledge (y)', ET08Label),
-					z:unpack(rows, 'Action (z)', ET08Label),
-					mode: 'markers',
-					marker: {
-						size: 5,
-						opacity: 0.8,
-						color: ET08Color
-					},
-					type: 'scatter3d'
-
-				};
-				var data = [ET08Trace];
-				var layout = {
-					showlegend: true,
-				  legend: {
-				    x: 1,
-				    y: 0.5
-				  },
-					scene: {
-						xaxis:{
-							title: 'Place (x)',
-							range: [-1, 1]
-						},
-						yaxis:{
-							title: 'Knowledge (y)',
-							range: [-1, 1]
-						},
-						zaxis:{
-							title: 'Action (z)',
-							range: [-1, 1]
-						},
-						},
-					margin: {
-					l: 0,
-					r: 0,
-					b: 0,
-					t: 0
-				}};
-				Plotly.newPlot('plot', data, layout);
-			});
-			return true;
-		}
-
 		function showPlotAll(){
 			// w/ attractors
-			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-JUN-OCT/main/ETAtt.csv', function(err, rows){
+			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-N2479/main/ETAtt.csv', function(err, rows){
 				function unpack(rows, key, filter){
 					f=filterRows(rows,filter)
 					return f.map(function(f){return f[key];});
@@ -598,26 +543,8 @@
 					type: 'scatter3d',
 					legendgroup:  'attractors'
 				};
-				ET08Trace = {
-					name: ET08Label,
-					x:unpack(rows, 'Place (x)', ET08Label),
-					y:unpack(rows, 'Knowledge (y)', ET08Label),
-					z:unpack(rows, 'Action (z)', ET08Label),
-					mode: 'markers',
-					marker: {
-						size: AttSize,
-						opacity: 1.0,
-						line: {
-      						color: '#000000',
-      						width: 2
-   						}
-						//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
-					},
-					type: 'scatter3d',
-					legendgroup:  'attractors'
-				};
 
-				var data = [ET01Trace, ET02Trace, ET03Trace, ET04Trace, ET05Trace, ET06Trace, ET07Trace, ET08Trace ];
+				var data = [ET01Trace, ET02Trace, ET03Trace, ET04Trace, ET05Trace, ET06Trace, ET07Trace ];
 				var layout = {
 
 
@@ -626,7 +553,7 @@
 				    x: 1,
 				    y: 0.5
 				  },
-					colorway: [ET01Color, ET02Color, ET03Color, ET04Color, ET05Color, ET06Color, ET07Color, ET08Color],
+					colorway: [ET01Color, ET02Color, ET03Color, ET04Color, ET05Color, ET06Color, ET07Color],
 
 					scene: {
 						xaxis:{
@@ -649,7 +576,7 @@
 					t: 0
 
 				}};
-				d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-JUN-OCT/main/ETAll.csv', function(err, rows2){
+				d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-N2479/main/ETAll.csv', function(err, rows2){
 					function unpack2(rows2, key, filter){
 						f=filterRows(rows2,filter)
 						return f.map(function(f){return f[key];});
@@ -752,22 +679,9 @@
 						type: 'scatter3d',
 						legendgroup:  'points'
 					};
-					ET08Trace2 = {
-						name: ET08Label,
-						x:unpack2(rows2, 'Place (x)', ET08Label),
-						y:unpack2(rows2, 'Knowledge (y)', ET08Label),
-						z:unpack2(rows2, 'Action (z)', ET08Label),
-						mode: 'markers',
-						marker: {
-							size: 5,
-							opacity: 0.8,
-							//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
-						},
-						type: 'scatter3d',
-						legendgroup:  'points'
-					};
 
-					var data2 = [ET01Trace2, ET02Trace2, ET03Trace2, ET04Trace2, ET05Trace2, ET06Trace2, ET07Trace2, ET08Trace2, ET01Trace, ET02Trace, ET03Trace, ET04Trace, ET05Trace, ET06Trace, ET07Trace, ET08Trace ];
+
+					var data2 = [ET01Trace2, ET02Trace2, ET03Trace2, ET04Trace2, ET05Trace2, ET06Trace2, ET07Trace2, ET01Trace, ET02Trace, ET03Trace, ET04Trace, ET05Trace, ET06Trace, ET07Trace, ];
 					var layout = {
 
 
@@ -776,7 +690,7 @@
 							x: 1,
 							y: 0.5
 						},
-						colorway: [ET01Color, ET02Color, ET03Color, ET04Color, ET05Color, ET06Color, ET07Color, ET08Color],
+						colorway: [ET01Color, ET02Color, ET03Color, ET04Color, ET05Color, ET06Color, ET07Color]
 
 						scene: {
 							xaxis:{
@@ -810,7 +724,7 @@
 		function showPlotAtt(){
 		//	document.getElementById('plot').innerHTML = "";
 		console.log("test")
-			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-JUN-OCT/main/ETAtt.csv', function(err, rows){
+			d3.csv('https://raw.githubusercontent.com/lcenvs/3D-Graphing-With-Plotly-EcoTypes2022-N2479/main/ETAtt.csv', function(err, rows){
 
 				function unpack(rows, key, filter){
 					f=filterRows(rows,filter)
@@ -937,26 +851,9 @@
 					type: 'scatter3d'
 				};
 
-				ET08Trace = {
-					name: ET08Label,
-					x:unpack(rows, 'Place (x)', ET08Label),
-					y:unpack(rows, 'Knowledge (y)', ET08Label),
-					z:unpack(rows, 'Action (z)', ET08Label),
-					mode: 'markers',
-					marker: {
-						size: AttSize,
-						opacity: 1.0,
-						line: {
-      						color: '#000000',
-      						width: 2
-   						}
-						//colorway: ['rgb(238, 117, 47)', 'rgb(88, 165, 92)','rgb(242, 189, 66)']
-					},
-					type: 'scatter3d'
-				};
 
 
-				var data = [ET01Trace, ET02Trace, ET03Trace, ET04Trace, ET05Trace, ET06Trace, ET07Trace, ET08Trace ];
+				var data = [ET01Trace, ET02Trace, ET03Trace, ET04Trace, ET05Trace, ET06Trace, ET07Trace ];
 				var layout = {
 
 
@@ -965,7 +862,7 @@
 				    x: 1,
 				    y: 0.5
 				  },
-					colorway: [ET01Color, ET02Color, ET03Color, ET04Color, ET05Color, ET06Color, ET07Color, ET08Color],
+					colorway: [ET01Color, ET02Color, ET03Color, ET04Color, ET05Color, ET06Color, ET07Color],
 
 					scene: {
 						xaxis:{
@@ -1002,18 +899,17 @@
 
 <body>
 	<div class="buttons">
-		<button type="button" id="Earth Justice" onclick="ET01Plot()">Earth Justice</button>
-		<button type="button" id="Indigenous Justice" onclick="ET02Plot()">Indigenous Justice</button>
-		<button type="button" id="Ecoscience" onclick="ET03Plot()">Ecoscience</button>
-		<button type="button" id="Ecospirituality" onclick="ET04Plot()">Ecospirituality</button>
-		<button type="button" id="Science for Humanity" onclick="ET05Plot()">Science for Humanity</button>
-		<button type="button" id="Science Policy" onclick="ET06Plot()">Science Policy</button>
-		<button type="button" id="Small Green Steps" onclick="ET07Plot()">Small Green Steps</button>
-		<button type="button" id="Other" onclick="ET08Plot()">Other</button>
+		<button type="button" id="Earth Action" onclick="ET01Plot()">Earth Action</button>
+		<button type="button" id="Ecoscience" onclick="ET02Plot()">Ecoscience</button>
+		<button type="button" id="Ecospirituality" onclick="ET03Plot()">Ecospirituality</button>
+		<button type="button" id="Indigenous Justice" onclick="ET04Plot()">Indigenous Justice</button>
+		<button type="button" id="Science for Change" onclick="ET05Plot()">Science for Change</button>
+		<button type="button" id="Small Green Steps" onclick="ET06Plot()">Small Green Steps</button>
+		<button type="button" id="Neutral" onclick="ET07Plot()">Neutral</button>
 		<button type="button" id="All EcoTypes (Spring/Fall 2022; n = 2115)" onclick="showPlotAll()">Show All EcoTypes w/ Attractors</button>
-		<button type="button" id="EcoTypes Attractors (Spring/Fall 2022; n = 2115)" onclick="showPlotAtt()">Show EcoTypes Attractors Only</button>
+		<button type="button" id="EcoTypes Attractors (2022; n = 2479)" onclick="showPlotAtt()">Show EcoTypes Attractors Only</button>
 	</div>
-	<h3 id="title">All EcoTypes (Spring/Fall 2022; n = 2115)</h3>
+	<h3 id="title">All EcoTypes (2022; n = 2479)</h3>
 	<div id='plot' >
 
 	</div>
